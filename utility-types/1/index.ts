@@ -39,7 +39,7 @@
   ------------------------------------------
 */
 
-const article = {
+const article: Article = {
   id: 1,
   title: 'Utility types in Typescript part 1',
   description: 'Utilizing the built in types system for a cleaner code',
@@ -55,10 +55,10 @@ const article = {
 interface Article {
   id: number
   title: string
-  description: string,
+  description?: string,
   slug: string,
   tags: string[]
-  author: Author
+  author?: Author
   publishedAt: string
 }
 
@@ -66,6 +66,7 @@ interface Author {
   id: number
   name: string
 }
+
 // --------------------------------------------------------------------------------
 
 // ? Partial<T>
@@ -75,7 +76,6 @@ function updateArticle(article: Article, fieldsToUpdate: Partial<Article>) {
 }
 
 const articlePart2 = updateArticle(article, {
-  id: 2,
   title: 'Utility types in Typescript part 2',
   description: 'How to use utility types in TS',
 })
@@ -83,9 +83,9 @@ const articlePart2 = updateArticle(article, {
 
 // ? Required<T>
 
-const articleWithoutSlug: Article = { ...article } // okay
+const regularArticle: Article = { ...article } // okay
 
-const articleWithSlug: Required<Article> = { ...article } //! error
+const requiredArticle: Required<Article> = { ...article } //! error
 
 // --------------------------------------------------------------------------------
 

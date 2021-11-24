@@ -10,13 +10,13 @@
   *     - Omit<T, K>
   TODO  - Exclude<T, U>
   TODO  - Extract<T, U>
-  TODO  - Unique<T>
-  TODO  - Flatten<T>
   TODO  - NonNullable<T>
   TODO  - Parameters<T>
+  TODO  - ReturnType<T>
+  TODO  - InstanceType<T>
+        - Unique<T>
+        - Flatten<T>
         - ConstructorParameters<T>
-        - ReturnType<T>
-        - InstanceType<T>
         - ThisType<T>
         - ThisParameterType<T>
         - OmitThisParameter<T>
